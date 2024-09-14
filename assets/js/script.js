@@ -145,22 +145,46 @@ if($(".scroll").length) {
         Side Menu
     ====================================== */
     if ($("#sidemenu_toggle").length) {
+        // When sidemenu_toggle is clicked, open the side menu
         $("#sidemenu_toggle").on("click", function () {
             $(".side-menu").removeClass("side-menu-opacity");
             $(".pushwrap").toggleClass("active");
-            $(".side-menu").addClass("side-menu-active"), $("#close_side_menu").fadeIn(700)
-        }), $("#close_side_menu").on("click", function () {
-            $(".side-menu").removeClass("side-menu-active"), $(this).fadeOut(200), $(".pushwrap").removeClass("active");
+            $(".side-menu").addClass("side-menu-active");
+            $("#close_side_menu").fadeIn(700);
+        });
+    
+        // Close side menu when close button is clicked
+        $("#close_side_menu").on("click", function () {
+            $(".side-menu").removeClass("side-menu-active");
+            $(this).fadeOut(200);
+            $(".pushwrap").removeClass("active");
             setTimeout(function(){
                 $(".side-menu").addClass("side-menu-opacity");
             }, 500);
-        }), $(".side-nav .navbar-nav .nav-link").on("click", function () {
-            $(".side-menu").removeClass("side-menu-active"), $("#close_side_menu").fadeOut(200), $(".pushwrap").removeClass("active");
+        });
+    
+        // Handle clicking on nav links
+        $(".side-nav .navbar-nav .nav-link").on("click", function () {
+            // Check if the clicked link is a dropdown toggle
+            if ($(this).hasClass("dropdown-toggle") || $(this).closest(".dropdown-menu").length) {
+                // Prevent side menu from closing if it's a dropdown
+                return;
+            }
+            
+            // If it's not a dropdown link, close the side menu
+            $(".side-menu").removeClass("side-menu-active");
+            $("#close_side_menu").fadeOut(200);
+            $(".pushwrap").removeClass("active");
             setTimeout(function(){
                 $(".side-menu").addClass("side-menu-opacity");
             }, 500);
-        }), $("#btn_sideNavClose").on("click", function () {
-            $(".side-menu").removeClass("side-menu-active"), $("#close_side_menu").fadeOut(200), $(".pushwrap").removeClass("active");
+        });
+    
+        // Close side menu when close button inside the side nav is clicked
+        $("#btn_sideNavClose").on("click", function () {
+            $(".side-menu").removeClass("side-menu-active");
+            $("#close_side_menu").fadeOut(200);
+            $(".pushwrap").removeClass("active");
             setTimeout(function(){
                 $(".side-menu").addClass("side-menu-opacity");
             }, 500);

@@ -25,13 +25,49 @@
     <link href="assets/css/jquery_fancybox.min.css" rel="stylesheet">
     <link href="assets/css/owl_carousel.min.css" rel="stylesheet">
     <link href="assets/css/cubeportfolio.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet"/>
     <link href="assets/css/slick.css" rel="stylesheet">
     <link href="assets/css/slick_theme.css" rel="stylesheet">
     <link href="assets/css/wow.css" rel="stylesheet">
     <!-- Style Sheet -->
     <link href="assets/css/blog.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+
+
+    <style>
+        /* Optional: Style for the side menu to make drop-downs visible */
+        .side-menu .dropdown-menu {
+            display: none;
+        }
+        .side-menu .dropdown-menu.show {
+            display: block;
+        }
+
+        /* Dropdown menu background color */
+        .side-nav .dropdown-menu {
+            background-color: #333; /* Dark background for better contrast */
+            border: none; /* Remove border if necessary */
+        }
+
+        /* Dropdown menu text color */
+        .side-nav .dropdown-menu .nav-link {
+            color: #fff; /* White text for good visibility */
+            font-size: 1rem;
+        }
+
+        /* Change the hover state for better interaction */
+        .side-nav .dropdown-menu .nav-link:hover {
+            background-color: #555; /* Slightly lighter background on hover */
+            color: #fff; /* Keep text white on hover */
+        }
+
+        .dropdown-item:focus, .dropdown-item:hover {
+            color: #16181b;
+            text-decoration: none;
+            background-color: #0364c5 !important;
+        }
+
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -114,6 +150,19 @@
                                 <ul class="navbar-nav ml-auto">
                                     <li class="nav-item active"><a class="nav-link home" href="#">HOME</a></li>
                                     <li class="nav-item"><a class="nav-link scroll" href="#about-sec">ABOUT</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="#product-one">Product One</a>
+                                            <a class="dropdown-item" href="#product-two">Product Two</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownSub" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product Variations</a>
+                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownSub">
+                                                <a class="dropdown-item" href="#variation-one">Variation One</a>
+                                                <a class="dropdown-item" href="#variation-two">Variation Two</a>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li class="nav-item"><a class="nav-link scroll" href="#company-portfolio-section">PORTFOLIO</a></li>
                                     <li class="nav-item"><a class="nav-link scroll" href="#testimonial-sec">CLIENTS</a></li>
                                     <li class="nav-item"><a class="nav-link scroll" href="#blog-sec">BLOG</a></li>
@@ -131,6 +180,7 @@
                 </div>
             </div>
         </div>
+        
         <!--toggle btn-->
         <a href="javascript:void(0)" class="sidemenu_btn" id="sidemenu_toggle">
             <span></span>
@@ -140,54 +190,78 @@
     </div>
     <!--Side Nav-->
     <div class="side-menu hidden side-menu-opacity">
-        <div class="bg-overlay"></div>
+        <div class="bg-overlay" id="bg_overlay"></div>
         <div class="inner-wrapper">
             <span class="btn-close" id="btn_sideNavClose"><i></i><i></i></span>
             <div class="container">
                 <div class="row w-100 side-menu-inner-content">
-                <div class="col-12 d-flex justify-content-center align-items-center">
-                    <a href="index.html" class="navbar-brand"><img src="http://megaone.acrothemes.com/creative-startup/img/logo.png" alt="logo"></a>
-                </div>
-                <div class="col-12 col-lg-8">
-                    <nav class="side-nav w-100">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#home">HOME</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#about-sec">ABOUT</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#company-portfolio-section">PORTFOLIO</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#testimonial-sec">CLIENTS</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#blog-sec">BLOG</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link scroll" href="#contact-sec">CONTACT</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-12 col-lg-4 d-flex align-items-center">
-                    <div class="side-footer text-white w-100">
-                        <div class="menu-company-details">
-                            <span>+1 631 123 4567</span>
-                            <span>email@website.com</span>
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <a href="index.html" class="navbar-brand"><img src="http://megaone.acrothemes.com/creative-startup/img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="col-12 col-lg-8">
+                        <nav class="side-nav w-100">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link scroll" href="#home">HOME</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
+                                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                                        <li><a class="nav-link scroll" href="#team-sec">Our Team</a></li>
+                                        <li><a class="nav-link scroll" href="#careers-sec">Careers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
+                                    <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+                                        <li><a class="nav-link scroll" href="#portfolio-sec">Our Work</a></li>
+                                        <li><a class="nav-link scroll" href="#case-studies-sec">Case Studies</a></li>
+                                        <li><a class="nav-link scroll" href="#services-sec">Services</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                                    <ul class="dropdown-menu" aria-labelledby="productsDropdown">
+                                        <li><a class="nav-link scroll" href="#product-one">Product One</a></li>
+                                        <li><a class="nav-link scroll" href="#product-two">Product Two</a></li>
+                                        <li class="dropdown-divider"></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="productVariationsDropdown" role="button" aria-haspopup="true" aria-expanded="false">Product Variations</a>
+                                            <ul class="dropdown-menu" aria-labelledby="productVariationsDropdown">
+                                                <li><a class="nav-link scroll" href="#variation-one">Variation One</a></li>
+                                                <li><a class="nav-link scroll" href="#variation-two">Variation Two</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link scroll" href="#testimonial-sec">CLIENTS</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link scroll" href="#blog-sec">BLOG</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link scroll" href="#contact-sec">CONTACT</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-12 col-lg-4 d-flex align-items-center">
+                        <div class="side-footer text-white w-100">
+                            <div class="menu-company-details">
+                                <span>+1 631 123 4567</span>
+                                <span>email@website.com</span>
+                            </div>
+                            <ul class="social-icons-simple">
+                                <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="lab la-facebook"></i></a></li>
+                                <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-twitter"></i></a></li>
+                                <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-youtube"></i></a></li>
+                                <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-instagram"></i></a></li>
+                            </ul>
+                            <p class="text-white">&copy; 2024 MegaOne. Made With Love by Themesindustry</p>
                         </div>
-                        <ul class="social-icons-simple">
-                            <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="lab la-facebook"></i> </a> </li>
-                            <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-twitter"></i> </a> </li>
-                            <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-youtube"></i> </a> </li>
-                            <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-instagram"></i> </a> </li>
-                        </ul>
-                        <p class="text-white">&copy; 2024 MegaOne. Made With Love by Themesindustry</p>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
@@ -762,6 +836,83 @@
 
 <!-- <script src="http://megaone.acrothemes.com/vendor/js/contact_us.js"></script> -->
 <script src="assets/js/script.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        // Toggle dropdown visibility in side menu
+        $('.side-nav .dropdown-toggle').on('click', function(e) {
+            e.preventDefault(); // Prevent default action
+            e.stopPropagation(); // Stop event from bubbling up
+            
+            // Get the dropdown menu
+            var $dropdownMenu = $(this).next('.dropdown-menu');
+            var isVisible = $dropdownMenu.hasClass('show');
+
+            // Close all other dropdowns
+            $('.dropdown-menu').not($dropdownMenu).removeClass('show');
+            
+            // Toggle current dropdown menu
+            if (!isVisible) {
+                $dropdownMenu.addClass('show');
+            } else {
+                $dropdownMenu.removeClass('show');
+            }
+        });
+
+        // Prevent menu from closing when clicking on dropdown items
+        $('.side-nav .dropdown-menu .nav-link').on('click', function(e) {
+            e.stopPropagation(); // Prevent closing side menu on dropdown link click
+        });
+
+        // Close dropdowns when clicking outside
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.side-menu').length) {
+                $('.dropdown-menu').removeClass('show');
+            }
+        });
+
+        // Prevent the side menu from closing when clicking inside it
+        $('.side-menu').on('click', function(e) {
+            e.stopPropagation();
+        });
+
+        // Close side menu when clicking the close button
+        $('#btn_sideNavClose').on('click', function() {
+            $('.side-menu').addClass('hidden'); // Close the side menu
+        });
+
+        // Handle non-dropdown nav links to close the side menu
+        $(".side-nav .navbar-nav .nav-link").on("click", function(e) {
+            // If the clicked link is a dropdown toggle, prevent the side menu from closing
+            if ($(this).hasClass('dropdown-toggle')) {
+                e.stopPropagation(); // Do nothing for dropdown clicks
+                return;
+            }
+
+            // For non-dropdown items, close the side menu
+            $(".side-menu").removeClass("side-menu-active");
+            $("#close_side_menu").fadeOut(200);
+            $(".pushwrap").removeClass("active");
+            setTimeout(function(){
+                $(".side-menu").addClass("side-menu-opacity");
+            }, 500);
+        });
+
+        // Close side menu when clicking outside of it
+        $("#close_side_menu").on("click", function () {
+            $(".side-menu").removeClass("side-menu-active");
+            $(this).fadeOut(200);
+            $(".pushwrap").removeClass("active");
+            setTimeout(function(){
+                $(".side-menu").addClass("side-menu-opacity");
+            }, 500);
+        });
+    });
+</script>
+
+
+
 
 </body>
 
