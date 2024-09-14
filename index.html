@@ -64,7 +64,20 @@
         .dropdown-item:focus, .dropdown-item:hover {
             color: #16181b;
             text-decoration: none;
-            background-color: #0364c5 !important;
+            background-color: #077220 !important;
+        }
+
+        /* Make sure submenus are aligned properly */
+        .dropdown-menu {
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+
+        /* Ensure visibility of the submenu */
+        .dropdown-menu.show {
+            display: block;
         }
 
     </style>
@@ -117,8 +130,8 @@
                 <div class="row">
                     <div class="col-6">
                         <ul class="top-personal-info">
-                            <li><a href="#"><i class="las la-phone"></i> +1 631 123 4567</a></li>
-                            <li><a href="#"><i class="las la-envelope"></i> email@website.com</a></li>
+                            <li><a href="#"><i class="las la-phone"></i> 01712901594, 01716757439, 01688682455</a></li>
+                            <li><a href="#"><i class="las la-envelope"></i> mhossain@shahtexltd.com, info@shahtexltd.com</a></li>
                         </ul>
                     </div>
                     <div class="col-6 text-right">
@@ -138,35 +151,96 @@
                 <div class="row">
                     <div class="col-4 col-lg-3">
                         <a class="navbar-brand simple-nav-logo" href="index.html">
-                            <img src="http://megaone.acrothemes.com/creative-startup/img/logo.png" alt="logo">
+                            <img src="assets/images/shahtexlogo_croped.jpg" alt="logo">
                         </a>
                         <a class="navbar-brand fixed-nav-logo" href="index.html">
-                            <img src="http://megaone.acrothemes.com/creative-startup/img/logo-black.png" alt="logo">
+                            <img src="assets/images/shahtexlogo_croped_bg_less.png" alt="logo">
                         </a>
                     </div>
                     <div class="col-8 col-lg-9 simple-navbar">
                         <nav class="navbar navbar-expand-lg">
                             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                 <ul class="navbar-nav ml-auto">
-                                    <li class="nav-item active"><a class="nav-link home" href="#">HOME</a></li>
-                                    <li class="nav-item"><a class="nav-link scroll" href="#about-sec">ABOUT</a></li>
+                                    <li class="nav-item active"><a class="nav-link home" href="#">Home</a></li>
+                                    <li class="nav-item"><a class="nav-link scroll" href="#about-sec">About</a></li>
+                                    <li class="nav-item"><a class="nav-link scroll" href="#about-sec">Our Mission</a></li>
                                     <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="#product-one">Product One</a>
-                                            <a class="dropdown-item" href="#product-two">Product Two</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdownSub" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Product Variations</a>
-                                            <div class="dropdown-menu" aria-labelledby="navbarDropdownSub">
-                                                <a class="dropdown-item" href="#variation-one">Variation One</a>
-                                                <a class="dropdown-item" href="#variation-two">Variation Two</a>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="labelDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Labels</a>
+                                            <div class="dropdown-menu" aria-labelledby="labelDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Woven Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Taffeta Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Needle Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Heat Transfer Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Printed Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Satin Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Paper Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Care Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Barcode Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Fire Label</a>
+                                                <a class="dropdown-item" href="#variation-two">Size Label</a>
                                             </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="tagDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</a>
+                                            <div class="dropdown-menu" aria-labelledby="tagDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Hang Tag</a>
+                                                <a class="dropdown-item" href="#variation-two">Waist Tag</a>
+                                                <a class="dropdown-item" href="#variation-two">Size Tag</a>
+                                                <a class="dropdown-item" href="#variation-two">Brand Tag</a>
+                                                <a class="dropdown-item" href="#variation-two">Price Tag</a>
+                                                <a class="dropdown-item" href="#variation-two">Joker Tag</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="cardDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cards</a>
+                                            <div class="dropdown-menu" aria-labelledby="cardDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Photo Card</a>
+                                                <a class="dropdown-item" href="#variation-two">Photo Inlay</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="stringDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">String</a>
+                                            <div class="dropdown-menu" aria-labelledby="stringDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Lock String</a>
+                                                <a class="dropdown-item" href="#variation-two">Tag String</a>
+                                                <a class="dropdown-item" href="#variation-two">Plastic String</a>
+                                                <a class="dropdown-item" href="#variation-two">Jute String</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="boxesDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Boxes</a>
+                                            <div class="dropdown-menu" aria-labelledby="boxesDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Women's Boxes</a>
+                                                <a class="dropdown-item" href="#variation-two">Men's Boxes</a>
+                                                <a class="dropdown-item" href="#variation-two">Baby & Kid's Boxes</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="polyDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Poly</a>
+                                            <div class="dropdown-menu" aria-labelledby="polyDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Printed Poly</a>
+                                                <a class="dropdown-item" href="#variation-two">Zipper Poly</a>
+                                                <a class="dropdown-item" href="#variation-two">Bopp Poly</a>
+                                                <a class="dropdown-item" href="#variation-two">Recycled Poly</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="stickerDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Stickers</a>
+                                            <div class="dropdown-menu" aria-labelledby="stickerDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Carton Sticker</a>
+                                                <a class="dropdown-item" href="#variation-one">Barcode Sticker</a>
+                                                <a class="dropdown-item" href="#variation-one">Poly Sticker</a>
+                                                <a class="dropdown-item" href="#variation-one">Hangtag Sticker</a>
+                                            </div>
+
+                                            <a class="dropdown-item dropdown-toggle" href="#" id="buttonDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buttons</a>
+                                            <div class="dropdown-menu" aria-labelledby="buttonDropDown">
+                                                <a class="dropdown-item" href="#variation-one">Shank Button</a>
+                                                <a class="dropdown-item" href="#variation-one">Stud Button</a>
+                                                <a class="dropdown-item" href="#variation-one">Plastic Button</a>
+                                                <a class="dropdown-item" href="#variation-one">Metal Button</a>
+                                            </div>
+
                                         </div>
                                     </li>
-                                    <li class="nav-item"><a class="nav-link scroll" href="#company-portfolio-section">PORTFOLIO</a></li>
-                                    <li class="nav-item"><a class="nav-link scroll" href="#testimonial-sec">CLIENTS</a></li>
-                                    <li class="nav-item"><a class="nav-link scroll" href="#blog-sec">BLOG</a></li>
-                                    <li class="nav-item"><a class="nav-link scroll" href="#contact-sec">CONTACT</a></li>
+                                    <li class="nav-item"><a class="nav-link scroll" href="#contact-sec">Contact</a></li>
                                 </ul>
                             </div>
                         </nav>
@@ -196,52 +270,96 @@
             <div class="container">
                 <div class="row w-100 side-menu-inner-content">
                     <div class="col-12 d-flex justify-content-center align-items-center">
-                        <a href="index.html" class="navbar-brand"><img src="http://megaone.acrothemes.com/creative-startup/img/logo.png" alt="logo"></a>
+                        <a href="index.html" class="navbar-brand"><img src="assets/images/shahtexlogo_croped_bg_less.png" alt="logo"></a>
                     </div>
                     <div class="col-12 col-lg-8">
                         <nav class="side-nav w-100">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link scroll" href="#home">HOME</a>
-                                </li>
+                                <li class="nav-item active"><a class="nav-link home" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link scroll" href="#about-sec">About</a></li>
+                                <li class="nav-item"><a class="nav-link scroll" href="#about-sec">Our Mission</a></li>
+
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" aria-haspopup="true" aria-expanded="false">ABOUT</a>
-                                    <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
-                                        <li><a class="nav-link scroll" href="#team-sec">Our Team</a></li>
-                                        <li><a class="nav-link scroll" href="#careers-sec">Careers</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" aria-haspopup="true" aria-expanded="false">PORTFOLIO</a>
-                                    <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
-                                        <li><a class="nav-link scroll" href="#portfolio-sec">Our Work</a></li>
-                                        <li><a class="nav-link scroll" href="#case-studies-sec">Case Studies</a></li>
-                                        <li><a class="nav-link scroll" href="#services-sec">Services</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+                                    
                                     <ul class="dropdown-menu" aria-labelledby="productsDropdown">
-                                        <li><a class="nav-link scroll" href="#product-one">Product One</a></li>
-                                        <li><a class="nav-link scroll" href="#product-two">Product Two</a></li>
-                                        <li class="dropdown-divider"></li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Labels</a></li>
                                         <li class="dropdown-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="productVariationsDropdown" role="button" aria-haspopup="true" aria-expanded="false">Product Variations</a>
-                                            <ul class="dropdown-menu" aria-labelledby="productVariationsDropdown">
-                                                <li><a class="nav-link scroll" href="#variation-one">Variation One</a></li>
-                                                <li><a class="nav-link scroll" href="#variation-two">Variation Two</a></li>
-                                            </ul>
+                                            <a class="nav-link dropdown-toggle" href="#">Woven Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Taffeta Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Needle Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Heat Transfer Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Printed Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Satin Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Paper Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Care Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Barcode Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Fire Label</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Size Label</a> <br>
                                         </li>
+
+
+                                        <li><a class="nav-link scroll" href="#product-one">Tags</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Hang Tag</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Waist Tag</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Size Tag</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Brand Tag</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Price Tag</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Joker Tag</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Cards</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Photo Card</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Photo Inlay</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">String</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Lock String</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Tag String</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Plastic String</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Jute String</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Boxes</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Women's Boxes</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Man's Boxes</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-two">Baby & Kid's Boxes</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Poly</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Printed Poly</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Zipper Poly</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Bopp Poly</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Recycled Poly</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Stickers</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Carton Stickers</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Barcode Stickers</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Poly Stickers</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Hangtag Stickers</a> <br>
+                                        </li>
+
+                                        <li><a class="nav-link scroll" href="#product-one">Buttons</a></li>
+                                        <li class="dropdown-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Shank Button</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Stud Button</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Plastic Button</a> <br>
+                                            <a class="nav-link dropdown-toggle" href="#variation-one">Metal Button</a> <br>
+                                        </li>
+
                                     </ul>
+
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link scroll" href="#testimonial-sec">CLIENTS</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link scroll" href="#blog-sec">BLOG</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link scroll" href="#contact-sec">CONTACT</a>
+                                    <a class="nav-link scroll" href="#contact-sec">Contact</a>
                                 </li>
                             </ul>
                         </nav>
@@ -249,8 +367,8 @@
                     <div class="col-12 col-lg-4 d-flex align-items-center">
                         <div class="side-footer text-white w-100">
                             <div class="menu-company-details">
-                                <span>+1 631 123 4567</span>
-                                <span>email@website.com</span>
+                                <span>01712901594, 01716757439, 01688682455</span>
+                                <span>mhossain@shahtexltd.com, info@shahtexltd.com</span>
                             </div>
                             <ul class="social-icons-simple">
                                 <li><a class="facebook-text-hvr" href="javascript:void(0)"><i class="lab la-facebook"></i></a></li>
@@ -258,7 +376,7 @@
                                 <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-youtube"></i></a></li>
                                 <li><a class="instagram-text-hvr" href="javascript:void(0)"><i class="lab la-instagram"></i></a></li>
                             </ul>
-                            <p class="text-white">&copy; 2024 MegaOne. Made With Love by Themesindustry</p>
+                            <p class="text-white">&copy; 2024 ShahTexltd.com</p>
                         </div>
                     </div>
                 </div>
@@ -837,6 +955,32 @@
 <!-- <script src="http://megaone.acrothemes.com/vendor/js/contact_us.js"></script> -->
 <script src="assets/js/script.js"></script>
 
+
+<script>
+    $(document).ready(function () {
+        // Toggle multi-level dropdowns
+        $('.dropdown-item.dropdown-toggle').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation(); // Prevent closing the dropdown
+
+            var $parentMenu = $(this).closest('.dropdown-menu');
+            var $submenu = $(this).next('.dropdown-menu');
+
+            // Close any open submenus
+            $parentMenu.find('.dropdown-menu').removeClass('show');
+
+            // Toggle the submenu
+            $submenu.toggleClass('show');
+        });
+
+        // Close the dropdowns if clicking outside
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.dropdown-menu').length) {
+                $('.dropdown-menu').removeClass('show');
+            }
+        });
+    });
+</script>
 
 <script>
     $(document).ready(function() {
