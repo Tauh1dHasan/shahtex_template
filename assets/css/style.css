@@ -1359,10 +1359,10 @@ header .main-navigation nav .navbar-nav .nav-item:nth-child(3n) .nav-link:hover,
     transition: 300ms all ease;
 }
 .cbp-item.even {
-    margin-top: -190px;
+    /* margin-top: -190px; */
 }
 .cbp-l-grid-mosaic .cbp-caption-activeWrap {
-    background: rgba(247, 28, 82, 0.8);
+    background: rgb(0 0 0 / 34%);
 
 }
 .cbp-l-caption-title {
